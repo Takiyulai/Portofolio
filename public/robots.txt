@@ -1,0 +1,21 @@
+# robots.txt pour le portfolio de Takiyulai DRAMANE
+
+User-agent: *
+# Autoriser le crawl de toutes les sections
+Allow: /
+
+# Interdire les dossiers inutiles (optionnel pour React)
+Disallow: /node_modules/
+Disallow: /build/
+Disallow: /dist/
+Disallow: /scripts/
+
+# Lien vers le sitemap
+Sitemap: https://tonsite.vercel.app/sitemap.xml
+
+# Instructions pour certains bots spécifiques (optionnel)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /

@@ -1,0 +1,60 @@
+@import "tailwindcss";  
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');  
+  
+/* ========================================  
+   THÈME COMPLET (couleurs, police, etc.)  
+   ======================================== */  
+@theme {  
+  /* COULEURS CUSTOM */  
+  --color-coral-400: #A5B4FC;   /* Bleu lavande clair */  
+  --color-coral-500: #6366F1;   /* Indigo principal (élégant et moderne) */  
+  --color-coral-600: #4338CA;   /* Bleu-violet profond */  
+  --color-gold: #7C3AED;        /* Accent violet vif pour détails dynamiques */  
+  --color-light: #F5F3FF;       /* Fond clair avec une touche lavande */  
+  
+  --color-dark-100: #1a1a1a;  
+  --color-dark-200: #2d2d2d;  
+  --color-dark-300: #3d3d3d;  
+  --color-dark-400: #4a4a4a;  
+  
+  /* POLICE */  
+  --font-family-sans: "Saira", sans-serif;  
+  
+  /* ESPACEMENTS, RADIUS, etc. (optionnel) */  
+  --radius-lg: 1rem;  
+  --radius-xl: 1.5rem;  
+}  
+  
+/* ========================================  
+   POLICE GLOBALE  
+   ======================================== */  
+* {  
+  font-family: var(--font-family-sans);  
+}  
+  
+/* ========================================  
+   ANIMATIONS  
+   ======================================== */  
+@keyframes float {  
+  0%, 100% { transform: translateY(0); }  
+  50% { transform: translateY(-15px); }  
+}  
+  
+@keyframes typing {  
+  from { width: 0; }  
+  to { width: 25ch; }  
+}  
+  
+@keyframes blink {  
+  50% { border-color: transparent; }  
+}  
+  
+.animate-float { animation: float 4s ease-in-out infinite; }  
+.typewriter {  
+  overflow: hidden;  
+  border-right: 0.15em solid #6366F1;  
+  white-space: nowrap;  
+  display: inline-block;  
+  letter-spacing: 0.12em;  
+  animation: typing 3s steps(22) forwards, blink 0.75s step-end infinite;  
+}  
