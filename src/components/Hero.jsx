@@ -75,7 +75,7 @@ const Hero = () => {
             transition={{ delay: 1 }}
             className="flex justify-center md:justify-start items-center gap-6 text-2xl"
           >
-            <a href="https://facebook.com/takiyulai.dramane" target="_blank" rel="noreferrer" className="text-coral-500 hover:text-coral-400 transition">
+            <a href="https://facebook.com/takiyulai.dramane.1" target="_blank" rel="noreferrer" className="text-coral-500 hover:text-coral-400 transition">
               <FaFacebook />
             </a>
             <a href="https://wa.me/22969765556" target="_blank" rel="noreferrer" className="text-coral-500 hover:text-coral-400 transition">
