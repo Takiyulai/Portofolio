@@ -5,7 +5,7 @@ const SEO = ({
   title = "Takiyulai DRAMANE | Développeur Web Full Stack",
   description = "Portfolio de Takiyulai DRAMANE, développeur web full stack. Création de sites modernes, rapides et sur mesure pour clients dans le monde entier et au Bénin.",
   url = "https://tonsite.vercel.app",
-  image = "https://tonsite.vercel.app/assets/takiyulai.png",
+  image = "https://takiyulai.vercel.app/assets/takiyulai.png",
   keywords = "Takiyulai DRAMANE, développeur web, full stack, portfolio, freelance, création site web, développement web, React, PHP, Tailwind CSS, Bootstrap, Bénin, international"
 }) => {
   return (
