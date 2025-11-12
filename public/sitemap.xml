@@ -3,7 +3,7 @@
   
   <!-- Page d'accueil -->
   <url>
-    <loc>https://tonsite.vercel.app/</loc>
+    <loc>https://takiyulai.vercel.app/</loc>
     <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
@@ -11,31 +11,31 @@
 
   <!-- Sections internes (single page) -->
   <url>
-    <loc>https://tonsite.vercel.app/#about</loc>
+    <loc>https://takiyulai.vercel.app/#about</loc>
     <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tonsite.vercel.app/#skills</loc>
+    <loc>https://takiyulai.vercel.app/#skills</loc>
     <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tonsite.vercel.app/#projects</loc>
+    <loc>https://takiyulai.vercel.app/#projects</loc>
     <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tonsite.vercel.app/#testimonials</loc>
+    <loc>https://takiyulai.vercel.app/#testimonials</loc>
     <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tonsite.vercel.app/#contact</loc>
+    <loc>https://takiyulai.vercel.app/#contact</loc>
     <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

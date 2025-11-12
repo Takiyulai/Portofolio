@@ -11,7 +11,7 @@ Disallow: /dist/
 Disallow: /scripts/
 
 # Lien vers le sitemap
-Sitemap: https://tonsite.vercel.app/sitemap.xml
+Sitemap: https://takiyulai.vercel.app/sitemap.xml
 
 # Instructions pour certains bots spécifiques (optionnel)
 User-agent: Googlebot
