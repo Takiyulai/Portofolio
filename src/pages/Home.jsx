@@ -1,6 +1,6 @@
 import Hero from '../components/Hero'
 import About from '../components/About'
-import Skills from '../components/skills'
+import Skills from '../components/Skills'
 import Projects from '../components/Projects'
 import Stats from '../components/Stats'
 import Work from '../components/Work'
