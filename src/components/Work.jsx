@@ -1,8 +1,18 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { workData } from '../assets/assets'
+import { useLanguage } from '../context/LanguageContext'
 
 const Work = () => {
+  const { t, language } = useLanguage()
+  const isFrench = language === 'fr'
+
+  const translatedWorkData = workData.map(item => ({
+    ...item,
+    role: isFrench ? item.roleFr : item.roleEn,
+    description: isFrench ? item.descriptionFr : item.descriptionEn
+  }))
+
   return (
     <motion.section
       initial={{ opacity: 0, y: 50 }}
@@ -14,15 +24,15 @@ const Work = () => {
     >
       <div className="container mx-auto px-6">
         <h2 className='text-3xl font-bold text-center mb-4'>
-          Expérience <span className='text-coral-600'>Professionnelle</span>
+          {t('work_title')?.split(' ')[0]} <span className='text-coral-600'>{t('work_title')?.split(' ')[1]}</span>
         </h2>
         <p className='text-gray-400 text-center max-w-2xl mx-auto mb-16'>
-          Mon parcours professionnel jusqu'à aujourd'hui
+          {t('work_subtitle')}
         </p>
         
         <div className='max-w-3xl mx-auto'>
           <div className='space-y-12'>
-            {workData.map((data, i) => (
+            {translatedWorkData.map((data, i) => (
               <motion.div
                 key={i}
                 initial={{ x: -50, opacity: 0 }}
@@ -39,7 +49,7 @@ const Work = () => {
                     </span>
                   </div>
                   <p className='text-coral-400 font-medium mb-2'>{data.company}</p>
-                  <p className='text-gray-300 text-sm'>{data.desciption}</p>
+                  <p className='text-gray-300 text-sm'>{data.description}</p>
                 </div>
               </motion.div>
             ))}

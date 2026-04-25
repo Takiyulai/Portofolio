@@ -2,8 +2,11 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { assets } from '../assets/assets'
 import { FaFacebook, FaWhatsapp, FaGithub, FaLinkedin } from 'react-icons/fa'
+import { useLanguage } from '../context/LanguageContext'
 
 const Hero = () => {
+  const { t } = useLanguage()
+
   return (
     <motion.section
       id='home'
@@ -23,7 +26,7 @@ const Hero = () => {
             transition={{ delay: 0.2 }}
             className='text-4xl md:text-6xl font-bold mb-4 text-white leading-tight'
           >
-            Salut, je suis <span className='text-coral-600'>Takiyulai DRAMANE</span>
+            {t('hero_greeting')} <span className='text-coral-600'>Takiyulai DRAMANE</span>
           </motion.h1>
 
           <motion.h2 
@@ -32,7 +35,7 @@ const Hero = () => {
             transition={{ delay: 0.4 }}
             className='text-2xl md:text-4xl font-semibold mb-6 text-coral-500'
           >
-            Développeur Full Stack
+            {t('hero_title')}
           </motion.h2>
 
           <motion.p 
@@ -41,9 +44,7 @@ const Hero = () => {
             transition={{ delay: 0.6 }}
             className='text-lg text-gray-300 mb-8 max-w-xl leading-relaxed'
           >
-            Je conçois des expériences web modernes, performantes et élégantes, 
-            tout en aidant les entreprises et organisations à renforcer leur présence 
-            numérique et à développer leur impact en ligne.
+            {t('hero_desc')}
           </motion.p>
 
           {/* ==== Boutons CTA ==== */}
@@ -57,14 +58,14 @@ const Hero = () => {
               href="#projects" 
               className='px-8 py-3 bg-coral-600 rounded-lg font-semibold hover:bg-coral-500 transition-all duration-300 text-white shadow-lg hover:shadow-coral-600/40'
             >
-              Voir mes projets
+              {t('hero_btn_projects')}
             </a>
 
             <a 
               href="#contact" 
               className='px-8 py-3 border-2 border-coral-600 rounded-lg font-semibold text-coral-500 hover:bg-coral-600 hover:text-white transition-all duration-300'
             >
-              Me contacter
+              {t('hero_btn_contact')}
             </a>
           </motion.div>
 
@@ -90,7 +91,7 @@ const Hero = () => {
           </motion.div>
         </div>
 
-        {/* ==== Image ==== */}
+        {/* ==== Image avec animation ==== */}
         <motion.div 
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
@@ -101,7 +102,7 @@ const Hero = () => {
             <div className='absolute inset-0 rounded-full bg-gradient-to-r from-coral-500 to-coral-600 opacity-50 animate-pulse'></div>
             <motion.img
               src={assets.profileImg}
-              alt="Takiyulai DRAMANE, développeur web full stack expert en création d’expériences digitales modernes" 
+              alt="Takiyulai DRAMANE, développeur web full stack" 
               className="relative w-full h-full object-cover rounded-full border-8 border-dark-200 shadow-2xl"
               animate={{ y: [0, -15, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}

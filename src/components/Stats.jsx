@@ -1,8 +1,10 @@
 import CountUp from 'react-countup'
 import { useInView } from 'react-intersection-observer'
+import { useLanguage } from '../context/LanguageContext'
 
 const Stats = () => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 })
+  const { t } = useLanguage()
 
   return (
     <section
@@ -16,28 +18,28 @@ const Stats = () => {
             <h3 className="text-5xl font-extrabold mb-2">
               <CountUp end={inView ? 20 : 0} duration={2} /> +
             </h3>
-            <p className="text-gray-200 text-sm uppercase tracking-wide">Projets Réalisés</p>
+            <p className="text-gray-200 text-sm uppercase tracking-wide">{t('stats_projects')}</p>
           </div>
 
           <div className="flex flex-col items-center">
             <h3 className="text-5xl font-extrabold mb-2">
               <CountUp end={inView ? 100 : 0} duration={2} /> %
             </h3>
-            <p className="text-gray-200 text-sm uppercase tracking-wide">Clients Satisfaits</p>
+            <p className="text-gray-200 text-sm uppercase tracking-wide">{t('stats_clients')}</p>
           </div>
 
           <div className="flex flex-col items-center">
             <h3 className="text-5xl font-extrabold mb-2">
               <CountUp end={inView ? 4 : 0} duration={2} /> ans
             </h3>
-            <p className="text-gray-200 text-sm uppercase tracking-wide">Expérience</p>
+            <p className="text-gray-200 text-sm uppercase tracking-wide">{t('stats_experience')}</p>
           </div>
 
           <div className="flex flex-col items-center">
             <h3 className="text-5xl font-extrabold mb-2">
-              <CountUp end={inView ? 18 : 0} duration={2} /> +
+              <CountUp end={inView ? 10 : 0} duration={2} /> +
             </h3>
-            <p className="text-gray-200 text-sm uppercase tracking-wide">Technologies Maîtrisées</p>
+            <p className="text-gray-200 text-sm uppercase tracking-wide">{t('stats_technologies')}</p>
           </div>
           
         </div>

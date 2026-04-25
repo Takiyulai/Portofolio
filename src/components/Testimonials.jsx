@@ -2,8 +2,18 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { testimonials } from '../assets/assets'
 import { FaStar } from 'react-icons/fa'
+import { useLanguage } from '../context/LanguageContext'
 
 const Testimonials = () => {
+  const { t, language } = useLanguage()
+  const isFrench = language === 'fr'
+
+  const translatedTestimonials = testimonials.map(item => ({
+    ...item,
+    role: isFrench ? item.roleFr : item.roleEn,
+    content: isFrench ? item.contentFr : item.contentEn
+  }))
+
   return (
     <motion.section
       initial={{ opacity: 0, y: 50 }}
@@ -15,14 +25,14 @@ const Testimonials = () => {
     >
       <div className="container mx-auto px-6">
         <h2 className="text-3xl font-bold text-center mb-4">
-          Ce qu'en disent <span className="text-coral-600">mes clients</span>
+          {t('testimonials_title')?.split(' ')[0]} <span className="text-coral-600">{t('testimonials_title')?.split(' ')[3] || t('testimonials_title')?.split(' ')[1]}</span>
         </h2>
         <p className="text-gray-400 text-center max-w-2xl mx-auto mb-16">
-          Des retours authentiques sur mes réalisations
+          {t('testimonials_subtitle')}
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {testimonials.map((t, i) => (
+          {translatedTestimonials.map((t, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 30 }}

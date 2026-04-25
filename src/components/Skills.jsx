@@ -1,8 +1,11 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { skills } from '../assets/assets'
+import { useLanguage } from '../context/LanguageContext'
 
 const Skills = () => {
+  const { t } = useLanguage()
+
   return (
     <motion.section
       initial={{ opacity: 0, y: 50 }}
@@ -14,10 +17,10 @@ const Skills = () => {
     >
       <div className='container mx-auto px-6'>
         <h2 className='text-3xl font-bold text-center mb-3'>
-          Mes <span className='text-coral-600'>Compétences</span>
+          {t('skills_title')?.split(' ')[0]} <span className='text-coral-600'>{t('skills_title')?.split(' ')[1]}</span>
         </h2>
         <p className='text-gray-400 text-center max-w-2xl mx-auto mb-12 text-sm md:text-base'>
-          Technologies que je maîtrise pour donner vie à vos projets
+          {t('skills_subtitle')}
         </p>
 
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto'>

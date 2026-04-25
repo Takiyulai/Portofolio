@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
 
-const ProjectCard = ({ title, description, image, tech, demo, code }) => {
+const ProjectCard = ({ title, description, image, tech, demo, code, t }) => {
   return (
     <div className='bg-dark-300 rounded-2xl overflow-hidden hover:-translate-y-3 transition-all duration-300 cursor-pointer shadow-xl group'>
       <div className="relative overflow-hidden">
@@ -13,17 +13,27 @@ const ProjectCard = ({ title, description, image, tech, demo, code }) => {
         <p className='text-gray-400 mb-4 text-sm'>{description}</p>
         <div className='flex flex-wrap gap-2 mb-6'>
           {tech.map((item, i) => (
-            <span key={i} className='px-3 py-1 bg-coral-500/20 text-coral-400 rounded-full text-xs'>
+            <span key={i} className='px-3 py-1 bg-coral-500/20 text-coral-400 rounded-full text-xs font-medium'>
               {item}
             </span>
           ))}
         </div>
         <div className='flex gap-3'>
-          <a href={demo} target="_blank" className='flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-coral-600 text-white rounded-lg hover:bg-coral-500 transition'>
-            <FaExternalLinkAlt /> Démo
+          <a 
+            href={demo} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className='flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-coral-600 text-white rounded-lg hover:bg-coral-500 transition duration-300'
+          >
+            <FaExternalLinkAlt size={14} /> {t('projects_demo')}
           </a>
-          <a href={code} target="_blank" className='flex-1 flex items-center justify-center gap-2 px-4 py-2 border border-coral-500 text-coral-500 rounded-lg hover:bg-coral-500/10 transition'>
-            <FaGithub /> Code
+          <a 
+            href={code} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className='flex-1 flex items-center justify-center gap-2 px-4 py-2 border border-coral-500 text-coral-500 rounded-lg hover:bg-coral-500/10 transition duration-300'
+          >
+            <FaGithub size={14} /> {t('projects_code')}
           </a>
         </div>
       </div>
