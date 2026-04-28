@@ -24,8 +24,9 @@ const Testimonials = () => {
       className="py-20 bg-dark-200"
     >
       <div className="container mx-auto px-6">
+        {/* ✅ TITRE CORRIGÉ - Plus de .split() */}
         <h2 className="text-3xl font-bold text-center mb-4">
-          {t('testimonials_title')?.split(' ')[0]} <span className="text-coral-600">{t('testimonials_title')?.split(' ')[3] || t('testimonials_title')?.split(' ')[1]}</span>
+          {t('testimonials_title')}
         </h2>
         <p className="text-gray-400 text-center max-w-2xl mx-auto mb-16">
           {t('testimonials_subtitle')}
